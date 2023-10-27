@@ -1,0 +1,139 @@
+/* 
+"left img buttons right"
+"left img info right"
+"left img stats right"
+"left img padding right"
+"left synopsis synopsis right"
+"left content content right"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Playpen+Sans:wght@200&display=swap');
+
+.containerr {
+  display: grid;
+  grid-template-columns: 50px 200px minmax(0, calc(1240px - 3.5rem)) 50px;
+  gap: 1rem;
+  grid-template-areas:
+    "left img title right"
+    "left img buttons right"
+    "left img tags right"
+    "left synopsis synopsis right"
+    "left . content right";
+}
+
+.left {
+  grid-area: left;
+  /* background-color: aqua; */
+}
+
+.right {
+  grid-area: right;
+  /* background-color: blueviolet; */
+}
+
+.img {
+  margin-top: 30px;
+  grid-area: img;
+  /* background-color: brown; */
+
+}
+
+.img img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.title {
+  margin-top: 30px;
+  grid-area: title;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: violet; */
+
+}
+
+.title h1{
+  font-family: 'Dosis',Arial,sans-serif;
+  font-weight: bolder;
+
+}
+.title h6{
+  font-family: 'Playpen Sans', cursive,sans-serif ;
+  font-weight: 800;
+
+}
+.title p{
+  margin-top: auto;
+}
+
+/* .buttons {
+  grid-auto-rows: min-content;
+} */
+
+.background {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: -1;
+  /* height: 300px; */
+  background-image: url("https://mangadex.org/covers/e0969782-cec4-4382-9366-4c69ecd1f3a2/debba5d2-c819-431f-ba85-d9430f198ba0.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.filter {
+  background-color: rgba(11, 9, 9, 0.4);
+  /* -webkit-backdrop-filter: blur(5px); */
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+
+}
+
+.buttons button {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+
+}
+.tags{
+  grid-area: tags;
+}
+.tags button{
+  background-color: rgb(80, 80, 69);
+  border-radius: 8px;
+  margin: 4px 8px;
+  padding: 4px 8px;
+  border: none;
+}
+.synopsis{
+  grid-area: synopsis;
+  margin-top: 20px;
+  font-family: 'Playpen Sans', cursive,sans-serif ;
+}
+.content{
+  grid-area: content;
+  margin-top: 25px;
+}
+
+.chapters{
+  margin: 20px 0;
+}
+.chapter{
+  /* #2c2c2c */
+  /* #4f4f4f */
+  background-color:#2c2c2c ;
+  margin: 7px 3px;
+  padding: 10px 3px;
+  font-size: 1.3rem;
+  font-family: 'Dosis',Arial,sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}

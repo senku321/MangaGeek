@@ -1,0 +1,34 @@
+<!-- <div class="hero">
+    <div class="imwrap">
+      <img src="../../../assets/hero/pngegg.png" alt="">
+      <h2>Bungou Stray Dogs</h2>
+      <p>For weeks, Atsushi Nakajima's orphanage has been plagued by a mystical tiger that only he seems to be unaware of. Suspected to be behind the strange incidents, the 18-year-old is abruptly kicked out of the orphanage and left hungry, homeless, and wandering through the city.</p>
+      <button> Read Now</button>
+    </div>
+</div> -->
+
+
+
+<section class="header">
+  <div class="slider">
+    <div class="slide active" *ngFor="let item of Mangas">
+      <div class="content">
+        <div class="background"
+          [style.background-image]="'url(' + 'https://mangadex.org/covers/' + item.id +'/' + item.img + ')'">
+          <div class="filter"></div>
+        </div>
+        <div class="img"> <img src="https://mangadex.org/covers/{{item.id}}/{{item.img}}" alt="" srcset=""></div>
+        <div class="description">
+          <h2>{{item.title}}</h2>
+          <p  [ngStyle]="{'font-style':'italic'}" >{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- controls  -->
+  <div class="controls">
+    <div class="prev"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> </div>
+    <div class="next"> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </div>
+  </div>
+</section>

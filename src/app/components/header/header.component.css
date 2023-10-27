@@ -1,0 +1,236 @@
+
+  body {
+    font-family: sans-serif;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  .header {
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    overflow-x: hidden;
+    
+  }
+
+  .header .slider{
+    height: 100%;
+    width: 100%;
+  }
+  .content{
+    margin: 10px 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin */
+    /* justify-content: center; */
+
+  }
+
+  .background{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    z-index: -1;
+    opacity: 0.2;
+    
+  }
+  .filter{
+    background-color: rgba(11, 9, 9, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(14px);
+    height: 100%;
+    width: 100%;
+    
+  }
+  .content .img {
+    margin: 0 30px 5px 40px;
+    
+
+    /* align-self: center; */
+  }
+
+  .content .img img{
+    width: auto;
+    max-width: 200px;
+    /* object-fit: cover; */
+    aspect-ratio: 3/4;
+
+  }
+
+  .header .slide{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+  .header .slide.active {
+    display:flex;
+  }
+
+  .header .controls .prev,
+  .header .controls .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    color: #ffffff;
+    background-color: #110f0f;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    /* transition: all 0.5s ease; */
+  }
+  .header .controls .prev:hover,
+  .header .controls .next:hover {
+    background-color: #ffffff5c;
+  }
+  .header .controls .prev {
+    border-radius: 50%;
+    left: 0;
+  }
+  .header .controls .next {
+    border-radius: 50%;
+    right: 0;
+  }
+  .header{
+    margin: 1rem 0 3rem 0;
+  }
+  .description{
+    height: 270px;
+  }
+  .description h2{
+    line-height: 2.75rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    
+  }
+
+  @media (max-width: 767px) {
+    .controls {
+      display: none;
+    }
+  }
+  /* .header .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: none;
+    padding: 0 15px;
+    animation: slide 2s ease;
+  }
+  .header .slide.active {
+    display: flex;
+  }
+  @keyframes slide {
+    0% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+  .header .header {
+    flex-grow: 1;
+  }
+  .header .caption {
+    width: 50%;
+  }
+  .header .caption h1 {
+    font-size: 42px;
+    color: #000000;
+    margin: 0;
+  }
+  .header .slide.active .caption h1 {
+    opacity: 0;
+    animation: captionText 0.5s ease forwards;
+    animation-delay: 1s;
+  }
+  .header .caption p {
+    font-size: 18px;
+    margin: 15px 0 30px;
+    color: #222222;
+  }
+  .header .slide.active .caption p {
+    opacity: 0;
+    animation: captionText 0.5s ease forwards;
+    animation-delay: 1.2s;
+  }
+  .header .caption a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #000000;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .header .slide.active .caption a {
+    opacity: 0;
+    animation: captionText 0.5s ease forwards;
+    animation-delay: 1.4s;
+  }
+  
+  @keyframes captionText {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+
+  
+  .header .indicator {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+  
+  .header .indicator div {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #ff5722;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin: 0 3px;
+  }
+  
+  .header .indicator div.active {
+    background-color: #000;
+  }
+
+  } */

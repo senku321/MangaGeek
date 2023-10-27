@@ -1,0 +1,38 @@
+<!-- <app-navbar></app-navbar> -->
+
+<main>
+<div class="containerr">
+  <div class="left"></div>
+  <div class="img">
+    <img src="https://mangadex.org/covers/e0969782-cec4-4382-9366-4c69ecd1f3a2/debba5d2-c819-431f-ba85-d9430f198ba0.jpg" alt="">
+  </div>
+  <div class="title">
+    <h1>{{res.title}}</h1>
+    <h6>{{res.altTitle}}</h6>
+    <p>Yaki Tomato</p>
+  </div>
+  <div class="background">
+    <div class="filter"></div>
+  </div>
+  <div class="right"></div>
+  <div class="buttons">
+    <button>Add To The Library</button>
+  </div>
+  <div class="tags">
+    <button *ngFor="let tag of res.tags">{{tag}}</button>
+  </div>
+  <div class="synopsis">
+    {{res.description}}
+  </div>
+  <div class="content">
+    <h2>Chapters</h2>
+    <div class="chapters">
+      <div class="chapter" *ngFor="let chap of res.chapters" [routerLink]="['/chapter', chap.id]" >
+        <p>chapter-{{chap.attributes.chapter}}</p>
+        <p>{{chap.attributes.title}}</p>
+        <!-- <p>{{chap.attributes.publishAt}}</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
