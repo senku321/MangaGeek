@@ -1,17 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { manga } from 'Manga';
-import { MangaService } from 'src/app/services/manga.service';
+import { Component } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
-import { __values } from 'tslib';
+import { MangaService } from 'src/app/services/manga.service';
+import { manga } from 'Manga';
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  selector: 'app-seasonal',
+  templateUrl: './seasonal.component.html',
+  styleUrls: ['./seasonal.component.css']
 })
-export class SliderComponent {
-
-  name: String = "Latest Updates";
+export class SeasonalComponent {
+  name: String = "Seasonals";
   data: any;
   Mangas: manga[] = [];
   Manga: manga= {} as manga;
@@ -43,14 +41,13 @@ export class SliderComponent {
 
   constructor(private mangaService:MangaService, private imageService:ImageService){}
   ngOnInit(){
-    this.mangaService.getMangas().subscribe((response)=>{
+    this.mangaService.SeasonalMangas().subscribe((response)=>{
       this.data = response;
     
     this.wrapper(this.data.data);
-    console.log("this is what i got--------")
+    console.log("seasonals")
     console.log(this.data);
     
     })
   }
-
 }

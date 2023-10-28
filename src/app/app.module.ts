@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TitleComponent } from './components/title/title.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReaderComponent } from './components/reader/reader.component';
+import { RecentComponent } from './components/recent/recent.component';
+import { SeasonalComponent } from './components/seasonal/seasonal.component';
 
 
 
@@ -23,6 +25,8 @@ import { ReaderComponent } from './components/reader/reader.component';
     TitleComponent,
     HomeComponent,
     ReaderComponent,
+    RecentComponent,
+    SeasonalComponent,
 
   ],
   imports: [

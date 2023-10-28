@@ -1,17 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { manga } from 'Manga';
 import { MangaService } from 'src/app/services/manga.service';
 import { ImageService } from 'src/app/services/image.service';
 import { __values } from 'tslib';
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  selector: 'app-recent',
+  templateUrl: './recent.component.html',
+  styleUrls: ['./recent.component.css']
 })
-export class SliderComponent {
-
-  name: String = "Latest Updates";
+export class RecentComponent {
+  name: String = "Recently Added";
   data: any;
   Mangas: manga[] = [];
   Manga: manga= {} as manga;
@@ -43,14 +42,14 @@ export class SliderComponent {
 
   constructor(private mangaService:MangaService, private imageService:ImageService){}
   ngOnInit(){
-    this.mangaService.getMangas().subscribe((response)=>{
+    this.mangaService.RecentMangas().subscribe((response)=>{
       this.data = response;
-    
     this.wrapper(this.data.data);
-    console.log("this is what i got--------")
+    console.log("seasnals--")
     console.log(this.data);
     
     })
   }
 
 }
+
