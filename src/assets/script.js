@@ -75,14 +75,14 @@ function carousal() {
     // stop timer
     clearInterval(timer);
     // then started again timer
-    timer = setInterval(autoPlay, 9000);
+    timer = setInterval(autoPlay, 5000);
   }
 
   function autoPlay() {
     nextSlide();
   }
 
-  let timer = setInterval(autoPlay, 9000);
+  let timer = setInterval(autoPlay, 5000);
 
 
 }

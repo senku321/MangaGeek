@@ -17,7 +17,7 @@
           [style.background-image]="'url(' + 'https://mangadex.org/covers/' + item.id +'/' + item.img + ')'">
           <div class="filter"></div>
         </div>
-        <div class="img"> <img src="https://mangadex.org/covers/{{item.id}}/{{item.img}}" alt="" srcset=""></div>
+        <div class="img" [routerLink]="['/title', item.id]"> <img src="https://mangadex.org/covers/{{item.id}}/{{item.img}}" alt="" srcset=""></div>
         <div class="description">
           <h2>{{item.title}}</h2>
           <p  [ngStyle]="{'font-style':'italic'}" >{{item.description}}</p>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, ResolveStart } from '@angular/router';
 import { MangaService } from 'src/app/services/manga.service';
 import { ChaptersService } from 'src/app/services/chapters.service';
+import { ImageService } from 'src/app/services/image.service';
 
 
 @Component({
@@ -13,10 +14,9 @@ import { ChaptersService } from 'src/app/services/chapters.service';
  
 
 export class TitleComponent {
-  constructor(private route: ActivatedRoute, private chapters:ChaptersService, private manga:MangaService) { }
+  constructor(private route: ActivatedRoute, private chapters:ChaptersService, private manga:MangaService,private imageService:ImageService) { }
   res:about={} as about;
   id:string =<string>this.route.snapshot.paramMap.get('id');
-  
   
   fil(data:chapter[]){
     this.res.chapters= data.filter((value)=>value.attributes.translatedLanguage=="en")
@@ -37,7 +37,9 @@ export class TitleComponent {
         this.res.image = i.id;
       }
     }
-
+    this.imageService.getImage(this.res.image).then((value)=>{
+      this.res.image = value;
+    })   
     this.res.title = data.attributes.title.en;
     // this.res.altTitle = this.getAltTitle(data.attributes.altTitles);
     this.res.altTitle=data.attributes.altTitles.find((obj:any) => obj.hasOwnProperty('ja'))?.ja;
